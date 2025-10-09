@@ -9,6 +9,7 @@ public class HelloWorld {
 
 
         System.out.println("avant rebase");
+        System.out.println("rebase 1");
     }
 }
 
