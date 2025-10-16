@@ -13,7 +13,6 @@ pipeline {
                 sh 'javac *.java'
             }
         }
-
         stage('Execute code') {
             steps {
                 sh 'java HelloWorld'
