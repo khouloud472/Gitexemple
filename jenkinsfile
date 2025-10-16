@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    tools {
+    jdk 'JDK17'
+}
+
+    stages {
+        stage('Checkout code') {
+            steps {
+                git branch: 'master', url: 'https://github.com/khouloud472/Gitexemple.git'
+            }
+        }
+
+        stage('Compile code') {
+            steps {
+                // Compiler tous les fichiers Java
+                sh 'javac *.java'
+            }
+        }
+
+        stage('Execute code') {
+            steps {
+                // Exécuter le programme principal
+                sh 'java HelloWorld'
+            }
+        }
+    }
+}
